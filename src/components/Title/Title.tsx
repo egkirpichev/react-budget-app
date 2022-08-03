@@ -1,7 +1,11 @@
 import { StyledTitle } from "./styles"
 
-export const Title = () => {
+interface IProps {
+	innerText: string;
+}
+
+export const Title = ({innerText}: IProps) => {
 	return (
-		<StyledTitle>Budget App</StyledTitle>
+		<StyledTitle>{innerText}</StyledTitle>
 	)
 }
