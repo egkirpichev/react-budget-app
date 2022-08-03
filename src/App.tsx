@@ -1,10 +1,11 @@
 import { Title } from "./components/Title/Title";
+import { Wrapper } from "./ui/base";
 
 const App = () => {
   return (
-    <div className="App">
+    <Wrapper>
 			<Title />
-    </div>
+    </Wrapper>
   );
 }
 
