@@ -8,3 +8,13 @@ export enum Color {
 	LightGrey = "#999999",
 	Blue = "#23C9FF"
 }
+
+export enum Currency {
+	USD = "$",
+	EUR = "€",
+	GBR = "£",
+}
+
+export interface ICurrencyOption {
+	value: "$" | "€" | "£", label: "USD" | "EUR" | "GBR"
+}

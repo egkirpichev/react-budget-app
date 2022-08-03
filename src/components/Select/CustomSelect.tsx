@@ -1,18 +1,18 @@
-import Select from "react-select"
+import Select, { StylesConfig } from "react-select"
+import { ICurrencyOption } from "../../types"
 
 export const CustomSelect = () => {
-	const languageOptions = [
+	const currencyOptions: ICurrencyOption[] = [
 		{value: "$", label: "USD"},
 		{value: "€", label: "EUR"},
 		{value: "£", label: "GBR"},
 	]
 	
-	const customStyles = {
-		
+	const customStyles: StylesConfig<ICurrencyOption, boolean> = {
 	}
 
 
 	return (
-		<Select options={languageOptions} isMulti={false} defaultValue={languageOptions[0]}/>
+		<Select options={currencyOptions} isMulti={false} defaultValue={currencyOptions[0]}/>
 	)
 }
