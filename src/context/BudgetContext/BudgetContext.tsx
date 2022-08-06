@@ -12,7 +12,7 @@ const useBudgetValue = () => {
 	const [BudgetContext, setBudgetContext] = useState<IBudgetContext>(
 		() => {
 			return {
-				budget: 10
+				budget: 0
 			}
 		}
 	)

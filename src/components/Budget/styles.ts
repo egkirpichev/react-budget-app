@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Color } from "../../ui/color";
 
 export const StyledBudget = styled.div`
+	grid-column: 1/3;
 	padding: 32px 20px;
 	display: flex;
 	align-items: center;
