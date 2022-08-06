@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
 
 export const Header = styled.header`
 	display: grid;
-	grid-template-columns: 75% auto;
+	grid-template-columns: auto 75px;
 	grid-template-rows: 30px repeat(3, 1fr);
 	row-gap: 20px;
 `

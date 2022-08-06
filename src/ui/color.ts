@@ -5,6 +5,7 @@ export enum Color {
 	LightPurple = "#CCD5FF",
 	LightPink = "#E7BBE3",
 	Red = "#FF0000",
-	LightGrey = "#999999",
+	Grey = "#999999",
+	LightGrey = "#EEEEEE",
 	Blue = "#23C9FF"
 }

@@ -11,7 +11,6 @@ export const StyledBudget = styled.div`
 	border-radius: 10px;
 `
 export const Title = styled.span`
-	font-family: 'Inter', sans-serif;
 	font-weight: 500;
 	font-size: 20px;
 	line-height: 24px;
@@ -20,7 +19,6 @@ export const Title = styled.span`
 
 export const Button = styled.button`
 	padding: 10px 30px;
-	font-family: 'Inter', sans-serif;
 	font-weight: 500;
 	font-size: 14px;
 	line-height: 17px;
