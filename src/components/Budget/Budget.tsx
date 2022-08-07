@@ -1,14 +1,24 @@
-import { useBudgetContext } from "../../context/BudgetContext/BudgetContext"
-import { Button, StyledBudget, Title } from "./styles"
+import { ChangeEvent, useState } from "react";
+import { useBudgetContext } from "../../context/BudgetContext/BudgetContext";
+import { Button, Input, StyledBudget, Title } from "./styles";
 
 export const Budget = () => {
+  const { budget } = useBudgetContext();
 
-	const {budget} = useBudgetContext()
+  const [isEditMode, SetIsEditMode] = useState<boolean>(false);
 
-	return (
-		<StyledBudget>
-			<Title>Budget: {budget}$</Title>
-			<Button type="button">Edit</Button>
-		</StyledBudget>
-	)
-}
+  const handleClick = () => {
+    SetIsEditMode(!isEditMode);
+  };
+
+  return (
+    <StyledBudget>
+			
+      {isEditMode ? <Title>{`Budget: $${budget}`}</Title> : <Input placeholder="Enter  budget ..." type="number"/>}
+
+      <Button type="button" onClick={handleClick}>
+        {isEditMode ? "Save" : "Edit"}
+      </Button>
+    </StyledBudget>
+  );
+};

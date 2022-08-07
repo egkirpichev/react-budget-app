@@ -14,14 +14,25 @@ export const Title = styled.span`
 	font-weight: 500;
 	font-size: 20px;
 	line-height: 24px;
-	color: ${Color.Black};
+`
+
+export const Input = styled.input`
+	max-width:  45%;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 24px;
+	color: ${Color.White};
+	background: none;
+	border: none;
 `
 
 export const Button = styled.button`
-	padding: 10px 30px;
+	width: 85px;
+	padding: 10px 0px;
 	font-weight: 500;
 	font-size: 14px;
 	line-height: 17px;
+	text-align: center;
 	border: none;
 	border-radius: 10px; 
 	cursor: pointer;
