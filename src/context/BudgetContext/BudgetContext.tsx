@@ -2,16 +2,18 @@ import { createContext, FC, ReactNode, useContext, useState } from "react";
 
 interface IBudgetContext {
   budget: number;
+	editBudgetValue: (value: string) => void 
 }
 
 const BudgetContext = createContext({
   budget: 0,
+	editBudgetValue: (value: string) => {}
 });
 
 const useBudgetValue = () => {
   const [BudgetContext, setBudgetContext] = useState<IBudgetContext>(() => {
     return {
-      budget: 15,
+      budget: 10,
 
       editBudgetValue: (value: string) => {
         setBudgetContext((previousContext) => ({
@@ -24,6 +26,9 @@ const useBudgetValue = () => {
 
   return BudgetContext;
 };
+
+console.log(BudgetContext);
+
 
 export const useBudgetContext = () => {
   return useContext<IBudgetContext>(BudgetContext);
