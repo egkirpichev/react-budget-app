@@ -1,20 +1,18 @@
 import { SubmitHandler, useForm } from "react-hook-form";
 import { useExpensesContext } from "../../context/ExpencesContext/ExpencesContext";
+import { IExpense } from "../../types";
 import { Title } from "../Title/Title";
 import { Button, ExpenseInput, StyledForm } from "./styles";
-
-type FormType = {
-  name: string;
-  cost: string;
-};
+import { v4 as uuidv4 } from "uuid";
 
 export const Form = () => {
-  const { expenses } = useExpensesContext();
+  const { expenses, addNewExpense } = useExpensesContext();
 
-  const { register, handleSubmit, resetField} = useForm<FormType>();
+  const { register, handleSubmit, resetField} = useForm<IExpense>();
 
-  const onSubmit: SubmitHandler<FormType> = (expense) => {
-	
+  const onSubmit: SubmitHandler<IExpense> = (expense) => {
+		expense.id = uuidv4();
+		addNewExpense(expense);
 		resetField("name");
 		resetField("cost");
 		
