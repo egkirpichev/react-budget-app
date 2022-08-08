@@ -2,6 +2,7 @@ export enum Color {
 	Black = "#000000",
 	White = "#FFFFFF",
 	LightBlue = "#7CC6FE",
+	DarkBlue = "#1F718C",
 	LightPurple = "#CCD5FF",
 	LightPink = "#E7BBE3",
 	Red = "#FF0000",

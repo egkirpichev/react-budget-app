@@ -4,6 +4,9 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
 	min-height: 100vh;
 	padding: 30px 20px 0px;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
 `
 
 export const Header = styled.header`
