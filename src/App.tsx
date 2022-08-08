@@ -1,4 +1,5 @@
 import { Budget } from "./components/Budget/Budget";
+import { Expenses } from "./components/Expenses/Expenses";
 import { Form } from "./components/Form/Form";
 import { Remaining } from "./components/Remaining/Remaining";
 import { CustomSelect } from "./components/Select/CustomSelect";
@@ -16,6 +17,7 @@ const App = () => {
 				<Remaining />
 				<Spent />
       </Header>
+			<Expenses />
 			<Form />
     </Wrapper>
   );
