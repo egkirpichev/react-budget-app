@@ -15,7 +15,6 @@ export const Form = () => {
 		addNewExpense(expense);
 		resetField("name");
 		resetField("cost");
-		
 	};
 
   return (

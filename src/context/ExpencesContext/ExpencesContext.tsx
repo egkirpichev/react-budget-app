@@ -3,18 +3,12 @@ import { IExpense } from "../../types";
 import { v4 as uuidv4 } from "uuid";
 
 interface IExpencesContext {
-  expenses: IExpense[];
+  expenses: IExpense[] | [];
 	addNewExpense: (value: IExpense) => void;
 }
 
 const ExpensesContext = createContext<IExpencesContext>({
-  expenses: [
-    {
-      id: uuidv4(),
-      name: "",
-      cost: 0,
-    },
-  ],
+  expenses: [],
 	addNewExpense: (value: IExpense) => {},
 });
 
@@ -22,13 +16,7 @@ const useExpensesContextValue = () => {
   const [expensesContext, setExpensesContext] = useState<IExpencesContext>(
     () => {
       return {
-        expenses: [
-          {
-            id: uuidv4(),
-            name: "",
-            cost: 0,
-          },
-        ],
+        expenses: [],
 
 				addNewExpense: (expense) => {
 					setExpensesContext((previousContext) => ({
