@@ -29,8 +29,6 @@ const useCurrencyValue = () => {
   return currencyContext;
 };
 
-console.log(CurrencyContext);
-
 
 export const useCurrencyContext = () => {
 	return useContext<ICurrencyContext>(CurrencyContext)
