@@ -1,20 +1,38 @@
+import { SubmitHandler, useForm } from "react-hook-form";
 import { useExpensesContext } from "../../context/ExpencesContext/ExpencesContext";
-import { useInput } from "../../hooks/useInput";
 import { Title } from "../Title/Title";
-import { ExpenseInput } from "./ExpenseInput/ExpenseInput";
-import { Button, StyledForm } from "./styles";
+import { Button, ExpenseInput, StyledForm } from "./styles";
+
+type FormType = {
+  name: string;
+  cost: string;
+};
 
 export const Form = () => {
-  const nameInput = useInput();
-  const costInput = useInput();
+  const { expenses } = useExpensesContext();
 
-	const {expenses} = useExpensesContext()
+  const { register, handleSubmit, resetField} = useForm<FormType>();
+
+  const onSubmit: SubmitHandler<FormType> = (expense) => {
+	
+		resetField("name");
+		resetField("cost");
+		
+	};
 
   return (
-    <StyledForm>
+    <StyledForm onSubmit={handleSubmit(onSubmit)}>
       <Title innerText="Add Expense" />
-      <ExpenseInput placeholder="enter name ..." type="text" {...nameInput}/>
-      <ExpenseInput placeholder="enter cost ..." type="number" {...costInput}/>
+      <ExpenseInput
+        placeholder="enter name ..."
+        type="text"
+        {...register("name")}
+      />
+      <ExpenseInput
+        placeholder="enter cost ..."
+        type="number"
+        {...register("cost")}
+      />
       <Button type="submit">Done</Button>
     </StyledForm>
   );
