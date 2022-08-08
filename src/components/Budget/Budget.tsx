@@ -1,10 +1,13 @@
-import { ChangeEvent, MouseEvent, MouseEventHandler, useState } from "react";
-import { useBudgetContext} from "../../context/BudgetContext/BudgetContext";
+import { useState } from "react";
+import { useBudgetContext } from "../../context/BudgetContext/BudgetContext";
+import { useCurrencyContext } from "../../context/CurrencyContext/CurrencyContext";
 import { useInput } from "../../hooks/useInput";
 import { Button, Input, StyledBudget, Title } from "./styles";
 
 export const Budget = () => {
   const { budget, editBudgetValue } = useBudgetContext();
+
+	const {currency} = useCurrencyContext()
 
 	const budgetInput = useInput()
 
@@ -19,7 +22,7 @@ export const Budget = () => {
   return (
     <StyledBudget>
 			
-      {isEditMode ? <Input placeholder="Enter  budget ..." type="number" {...budgetInput}/> : <Title>{`Budget: $${budget}`}</Title>}
+      {isEditMode ? <Input placeholder="Enter  budget ..." type="number" {...budgetInput}/> : <Title>{`Budget: ${currency.value}${budget}`}</Title>}
 
       <Button type="button" onClick={handleClick}>
         {isEditMode ? "Save" : "Edit"}
