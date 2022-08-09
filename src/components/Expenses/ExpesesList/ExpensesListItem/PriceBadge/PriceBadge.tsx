@@ -2,11 +2,11 @@ import { StyledBadge } from "./styles"
 
 interface IProps {
 	currency: string,
-	price: number
+	cost: number
 }
 
-export const PriceBadge = ({currency, price}: IProps) => {
+export const PriceBadge = ({currency, cost}: IProps) => {
 	return (
-		<StyledBadge>{`${currency}${price}`}</StyledBadge>
+		<StyledBadge>{`${currency}${cost}`}</StyledBadge>
 	)
 }
