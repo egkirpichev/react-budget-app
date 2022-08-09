@@ -23,12 +23,12 @@ export const Form = () => {
       <ExpenseInput
         placeholder="enter name ..."
         type="text"
-        {...register("name")}
+        {...register("name", {required: true})}
       />
       <ExpenseInput
         placeholder="enter cost ..."
         type="number"
-        {...register("cost")}
+        {...register("cost", {required: true})}
       />
       <Button type="submit">Done</Button>
     </StyledForm>
