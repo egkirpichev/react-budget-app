@@ -7,6 +7,7 @@ export const customStyles: StylesConfig<ICurrencyOption, boolean> = {
 		...styles,
 		minHeight: `30px`,
 		border: `1px solid ${Color.LightGrey}`,
+		cursor: `pointer`,
 	}),
 
 	valueContainer: (styles) => ({

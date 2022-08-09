@@ -28,6 +28,7 @@ export const Button = styled.button`
   background-color: ${Color.Blue};
   border: none;
   border-radius: 10px;
+	cursor: pointer;
 
   :hover {
     background-color: ${Color.DarkBlue};
