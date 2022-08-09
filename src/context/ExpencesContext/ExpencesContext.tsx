@@ -5,11 +5,13 @@ import { v4 as uuidv4 } from "uuid";
 interface IExpencesContext {
   expenses: IExpense[] | [];
 	addNewExpense: (value: IExpense) => void;
+	removeExpense: (id: string) => void;
 }
 
 const ExpensesContext = createContext<IExpencesContext>({
   expenses: [],
 	addNewExpense: (value: IExpense) => {},
+	removeExpense: (id: string) => {},
 });
 
 const useExpensesContextValue = () => {
@@ -22,6 +24,13 @@ const useExpensesContextValue = () => {
 					setExpensesContext((previousContext) => ({
 						...previousContext,
 						expenses: [...previousContext.expenses, {...expense}]
+					}))
+				},
+
+				removeExpense: (id) => {
+					setExpensesContext((previousContext) => ({
+						...previousContext,
+						expenses: [...previousContext.expenses].filter(expense => expense.id!==id)
 					}))
 				}
       };
