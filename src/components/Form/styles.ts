@@ -19,8 +19,8 @@ export const ExpenseInput = styled.input`
 `;
 
 export const Button = styled.button`
-  padding: 15px 0px;
-  text-align: center;
+	padding: 15px 0px;
+	text-align: center;
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
