@@ -28,7 +28,7 @@ export const Remaining = () => {
 
   return (
     <StyledRemaining isOverspnding={isOverspnding}>
-      <Title isOverspnding={isOverspnding}>{`Remaining: ${currency.value}${remaining}`}</Title>
+      <Title isOverspnding={isOverspnding}>{`${isOverspnding ? "Overspending by" : "Remaining:"} ${currency.value}${Math.abs(remaining)}`}</Title>
     </StyledRemaining>
   );
 };
