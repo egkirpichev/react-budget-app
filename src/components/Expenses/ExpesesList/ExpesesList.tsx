@@ -1,7 +1,7 @@
 import { useExpensesContext } from "../../../context/ExpencesContext/ExpencesContext";
 import { IExpense } from "../../../types";
 import { ExpensesListItem } from "./ExpensesListItem/ExpensesListItem";
-import { StyledList } from "./styles";
+import { SearchError, StyledList } from "./styles";
 
 interface IProps {
   searchResult: IExpense[];
@@ -28,7 +28,7 @@ export const ExpesesList = ({ searchResult }: IProps) => {
     );
   }
 
-  if (!searchResult.length && expenses.length) return <p>Oooops 🙈</p>;
+  if (!searchResult.length && expenses.length) return <SearchError>Oooops 🙈</SearchError>;
 
   return <></>;
 };
