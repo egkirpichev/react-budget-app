@@ -38,3 +38,10 @@ export const Button = styled.button`
     box-shadow: inset 5px 5px 5px ${Color.Black};
   }
 `;
+
+export const ErrorMessage = styled.p`
+	padding: 0px 20px;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 19px;
+`
