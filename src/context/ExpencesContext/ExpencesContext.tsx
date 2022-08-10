@@ -1,6 +1,5 @@
 import { createContext, FC, ReactNode, useContext, useState } from "react";
 import { IExpense } from "../../types";
-import { v4 as uuidv4 } from "uuid";
 
 interface IExpencesContext {
   expenses: IExpense[] | [];
@@ -19,7 +18,6 @@ const useExpensesContextValue = () => {
     () => {
       return {
         expenses: [],
-
 				addNewExpense: (expense) => {
 					setExpensesContext((previousContext) => ({
 						...previousContext,

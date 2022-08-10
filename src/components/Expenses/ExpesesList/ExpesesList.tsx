@@ -1,14 +1,20 @@
 import { useExpensesContext } from "../../../context/ExpencesContext/ExpencesContext";
+import { IExpense } from "../../../types";
 import { ExpensesListItem } from "./ExpensesListItem/ExpensesListItem";
 import { StyledList } from "./styles";
 
-export const ExpesesList = () => {
+interface IProps {
+  searchResult: IExpense[];
+}
+
+export const ExpesesList = ({ searchResult }: IProps) => {
+	
   const { expenses } = useExpensesContext();
 
-  return (
-    <StyledList>
-      {expenses.length > 0 &&
-        expenses.map((expense) => {
+  if (searchResult.length) {
+    return (
+      <StyledList>
+        {searchResult.map((expense) => {
           return (
             <ExpensesListItem
               key={expense.id}
@@ -18,6 +24,11 @@ export const ExpesesList = () => {
             />
           );
         })}
-    </StyledList>
-  );
+      </StyledList>
+    );
+  }
+
+  if (!searchResult.length && expenses.length) return <p>Oooops 🙈</p>;
+
+  return <></>;
 };
