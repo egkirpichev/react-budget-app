@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useBudgetContext } from "../../context/BudgetContext";
 import { useCurrencyContext } from "../../context/CurrencyContext";
-import { useExpensesContext } from "../../context/ExpensesContext/";
+import { useExpensesContext } from "../../context/ExpensesContext";
 import { IExpense } from "../../types";
 import { StyledRemaining, Title } from "./styles";
 
@@ -23,8 +23,8 @@ export const Remaining = () => {
   useEffect(() => {
     if (remaining < 0) {
       setIsOverspending(true);
-    }
-  }, [spent]);
+    } else setIsOverspending(false)
+  }, [spent, budget]);
 
   return (
     <StyledRemaining isOverspnding={isOverspnding}>
