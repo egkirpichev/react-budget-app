@@ -1,0 +1,11 @@
+{
+  "files": {
+    "main.js": "/react-budget-app/static/js/main.d878411b.js",
+    "index.html": "/react-budget-app/index.html",
+    "static/media/closeIcon.svg": "/react-budget-app/static/media/closeIcon.b5ce850d2339ed2102c5710c49eb5866.svg",
+    "main.d878411b.js.map": "/react-budget-app/static/js/main.d878411b.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.d878411b.js"
+  ]
+}
