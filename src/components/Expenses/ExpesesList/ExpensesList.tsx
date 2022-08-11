@@ -1,13 +1,13 @@
-import { useExpensesContext } from "../../../context/ExpencesContext/ExpencesContext";
+import { useExpensesContext } from "../../../context/ExpensesContext";
 import { IExpense } from "../../../types";
-import { ExpensesListItem } from "./ExpensesListItem/ExpensesListItem";
+import { ExpensesListItem } from "./ExpensesListItem";
 import { SearchError, StyledList } from "./styles";
 
 interface IProps {
   searchResult: IExpense[];
 }
 
-export const ExpesesList = ({ searchResult }: IProps) => {
+export const ExpensesList = ({ searchResult }: IProps) => {
 	
   const { expenses } = useExpensesContext();
 

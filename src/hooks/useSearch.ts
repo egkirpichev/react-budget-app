@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useExpensesContext } from "../context/ExpencesContext/ExpencesContext";
+import { useExpensesContext } from "../context/ExpensesContext";
 import { IExpense } from "../types";
 
 export const useSearch = () => {

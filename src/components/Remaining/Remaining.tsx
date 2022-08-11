@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { useBudgetContext } from "../../context/BudgetContext/BudgetContext";
-import { useCurrencyContext } from "../../context/CurrencyContext/CurrencyContext";
-import { useExpensesContext } from "../../context/ExpencesContext/ExpencesContext";
+import { useBudgetContext } from "../../context/BudgetContext";
+import { useCurrencyContext } from "../../context/CurrencyContext";
+import { useExpensesContext } from "../../context/ExpensesContext/";
 import { IExpense } from "../../types";
 import { StyledRemaining, Title } from "./styles";
 
@@ -21,14 +21,16 @@ export const Remaining = () => {
   const [isOverspnding, setIsOverspending] = useState<boolean>(false);
 
   useEffect(() => {
-		if(remaining < 0) {
-			setIsOverspending(true)
-		}
-	}, [spent]);
+    if (remaining < 0) {
+      setIsOverspending(true);
+    }
+  }, [spent]);
 
   return (
     <StyledRemaining isOverspnding={isOverspnding}>
-      <Title isOverspnding={isOverspnding}>{`${isOverspnding ? "Overspending by" : "Remaining:"} ${currency.value}${Math.abs(remaining)}`}</Title>
+      <Title isOverspnding={isOverspnding}>{`${
+        isOverspnding ? "Overspending by" : "Remaining:"
+      } ${currency.value}${Math.abs(remaining)}`}</Title>
     </StyledRemaining>
   );
 };

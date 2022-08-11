@@ -1,9 +1,8 @@
-import { PriceBadge } from "./PriceBadge/PriceBadge";
+import { PriceBadge } from "./PriceBadge";
 import { DeleteButton, ListItem, Name } from "./styles";
 import { ReactComponent as CloseIcon } from "../../../../assets/closeIcon.svg";
-import { useCurrencyContext } from "../../../../context/CurrencyContext/CurrencyContext";
-import { useExpensesContext } from "../../../../context/ExpencesContext/ExpencesContext";
-import { ChangeEvent, MouseEventHandler } from "react";
+import { useExpensesContext } from "../../../../context/ExpensesContext";
+import { useCurrencyContext } from "../../../../context/CurrencyContext";
 
 interface IProps {
   id: string;
@@ -15,14 +14,13 @@ export const ExpensesListItem = ({ id, name, cost }: IProps) => {
   const { currency } = useCurrencyContext();
   const { expenses, removeExpense } = useExpensesContext();
 
-  const handleClick = (
-    {currentTarget}: React.MouseEvent<HTMLButtonElement>
-  ) => {
+  const handleClick = ({
+    currentTarget,
+  }: React.MouseEvent<HTMLButtonElement>) => {
     if (currentTarget.parentElement) {
-			removeExpense(currentTarget.parentElement.id);
+      removeExpense(currentTarget.parentElement.id);
     }
   };
-console.log(expenses);
 
   return (
     <ListItem id={id}>

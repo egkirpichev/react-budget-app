@@ -3,14 +3,14 @@ import { IExpense } from "../../types";
 
 interface IExpencesContext {
   expenses: IExpense[] | [];
-	addNewExpense: (value: IExpense) => void;
-	removeExpense: (id: string) => void;
+  addNewExpense: (value: IExpense) => void;
+  removeExpense: (id: string) => void;
 }
 
 const ExpensesContext = createContext<IExpencesContext>({
   expenses: [],
-	addNewExpense: (value: IExpense) => {},
-	removeExpense: (id: string) => {},
+  addNewExpense: (value: IExpense) => {},
+  removeExpense: (id: string) => {},
 });
 
 const useExpensesContextValue = () => {
@@ -18,19 +18,21 @@ const useExpensesContextValue = () => {
     () => {
       return {
         expenses: [],
-				addNewExpense: (expense) => {
-					setExpensesContext((previousContext) => ({
-						...previousContext,
-						expenses: [...previousContext.expenses, {...expense}]
-					}))
-				},
+        addNewExpense: (expense) => {
+          setExpensesContext((previousContext) => ({
+            ...previousContext,
+            expenses: [...previousContext.expenses, { ...expense }],
+          }));
+        },
 
-				removeExpense: (id) => {
-					setExpensesContext((previousContext) => ({
-						...previousContext,
-						expenses: [...previousContext.expenses].filter(expense => expense.id!==id)
-					}))
-				}
+        removeExpense: (id) => {
+          setExpensesContext((previousContext) => ({
+            ...previousContext,
+            expenses: [...previousContext.expenses].filter(
+              (expense) => expense.id !== id
+            ),
+          }));
+        },
       };
     }
   );

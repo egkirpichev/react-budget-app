@@ -4,12 +4,12 @@ import { ICurrencyOption } from "../../types";
 
 interface ICurrencyContext {
   currency: ICurrencyOption;
-	setCurrency: (value: ICurrencyOption) => void
+  setCurrency: (value: ICurrencyOption) => void;
 }
 
 const CurrencyContext = createContext<ICurrencyContext>({
   currency: { value: Currency.USD, label: "USD" },
-	setCurrency: (value: ICurrencyOption) => {}
+  setCurrency: (value: ICurrencyOption) => {},
 });
 
 const useCurrencyValue = () => {
@@ -17,27 +17,27 @@ const useCurrencyValue = () => {
     () => {
       return {
         currency: { value: Currency.USD, label: "USD" },
-				setCurrency: (value: ICurrencyOption) => {
-					setCurrencyContext((previousContext) => ({
-						...previousContext,
-						currency: value
-					}))
-				}
+        setCurrency: (value: ICurrencyOption) => {
+          setCurrencyContext((previousContext) => ({
+            ...previousContext,
+            currency: value,
+          }));
+        },
       };
     }
   );
   return currencyContext;
 };
 
-
 export const useCurrencyContext = () => {
-	return useContext<ICurrencyContext>(CurrencyContext)
-}
+  return useContext<ICurrencyContext>(CurrencyContext);
+};
 
 console.log(CurrencyContext);
 
-
-export const CurrencyContextProvider: FC<{ children: ReactNode }> = ({ children }) => {
+export const CurrencyContextProvider: FC<{ children: ReactNode }> = ({
+  children,
+}) => {
   return (
     <CurrencyContext.Provider value={useCurrencyValue()}>
       {children}
