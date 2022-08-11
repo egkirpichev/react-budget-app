@@ -1,12 +1,12 @@
 ## About The Project
 
-Budget tracking app
+Budget tracking app that helps to track purchases
 
-
+![image](https://user-images.githubusercontent.com/99477750/184047093-1d2edfdd-b760-4ed9-9c12-92c3d726c297.png)
 
 ### Deployment link:
 
-
+https://egkirpichev.github.io/react-budget-app/
 
 ### Built With
 
@@ -17,8 +17,6 @@ Budget tracking app
 * [![React-hook-form][React-hook-form.logo]][React-hook-form-url]
 
 ### Installation
-
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
 1. Clone the repo
    ```sh
