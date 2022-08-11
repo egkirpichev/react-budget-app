@@ -1,6 +1,6 @@
 ## About The Project
 
-Budget tracking app that helps to track purchases
+Useful budget app to track your purchases
 
 ![image](https://user-images.githubusercontent.com/99477750/184047093-1d2edfdd-b760-4ed9-9c12-92c3d726c297.png)
 
