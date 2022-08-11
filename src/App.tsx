@@ -1,23 +1,13 @@
-import { Expenses } from "./components/Expenses";
+import { Expenses } from "./components/Header/Expenses";
 import { Form } from "./components/Form";
-import { Remaining } from "./components/Remaining";
-import { LanguageSelect } from "./components/LanguageSelect";
-import { Spent } from "./components/Spent";
-import { Title } from "./components/Title";
-import { Background, Header, Wrapper } from "./ui/base";
-import { Budget } from "./components/Budget";
+import { Background, Wrapper } from "./ui/base";
+import { Header } from "./components/Header";
 
 const App = () => {
   return (
     <Background>
       <Wrapper>
-        <Header>
-          <Title innerText={"Budget App"}></Title>
-          <LanguageSelect />
-          <Budget />
-          <Remaining />
-          <Spent />
-        </Header>
+        <Header />
         <Expenses />
         <Form />
       </Wrapper>

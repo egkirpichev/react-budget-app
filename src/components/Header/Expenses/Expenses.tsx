@@ -1,5 +1,5 @@
-import { useSearch } from "../../hooks/useSearch";
-import { Title } from "../Title";
+import { useSearch } from "../../../hooks/useSearch";
+import { Title } from "../../Title";
 import { ExpensesList } from "./ExpesesList";
 import { SearchBar } from "./SearchBar";
 import { Container } from "./styles";

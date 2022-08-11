@@ -1,8 +1,8 @@
 import { PriceBadge } from "./PriceBadge";
 import { DeleteButton, ListItem, Name } from "./styles";
-import { ReactComponent as CloseIcon } from "../../../../assets/closeIcon.svg";
-import { useExpensesContext } from "../../../../context/ExpensesContext";
-import { useCurrencyContext } from "../../../../context/CurrencyContext";
+import { ReactComponent as CloseIcon } from "../../../../../assets/closeIcon.svg";
+import { useExpensesContext } from "../../../../../context/ExpensesContext";
+import { useCurrencyContext } from "../../../../../context/CurrencyContext";
 
 interface IProps {
   id: string;

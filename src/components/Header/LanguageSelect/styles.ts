@@ -1,6 +1,6 @@
 import { StylesConfig } from "react-select";
-import { ICurrencyOption } from "../../types";
-import { Color } from "../../ui/color";
+import { ICurrencyOption } from "../../../types";
+import { Color } from "../../../ui/color";
 
 export const customStyles: StylesConfig<ICurrencyOption, boolean> = {
 	control: (styles) => ({

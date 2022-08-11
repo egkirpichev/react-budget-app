@@ -1,7 +1,7 @@
-import { Background, Header, Wrapper } from "./base";
+import { Background, Wrapper } from "./base";
 
 import { Color } from "./color";
 
 import { GlobalStyles } from "./GlobalStyles";
 
-export { Background, Header, Wrapper, Color, GlobalStyles };
+export { Background, Wrapper, Color, GlobalStyles };

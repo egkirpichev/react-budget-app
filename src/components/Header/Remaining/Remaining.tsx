@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { useBudgetContext } from "../../context/BudgetContext";
-import { useCurrencyContext } from "../../context/CurrencyContext";
-import { useExpensesContext } from "../../context/ExpensesContext";
-import { IExpense } from "../../types";
+import { useBudgetContext } from "../../../context/BudgetContext";
+import { useCurrencyContext } from "../../../context/CurrencyContext";
+import { useExpensesContext } from "../../../context/ExpensesContext";
+import { IExpense } from "../../../types";
 import { StyledRemaining, Title } from "./styles";
 
 export const Remaining = () => {
