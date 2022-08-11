@@ -1,5 +1,6 @@
 {
-  "name": "budget-app",
+  "homepage": "https://egkirpichev.github.io/react-budget-app/",
+	"name": "budget-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
