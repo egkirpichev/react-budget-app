@@ -2,7 +2,7 @@
 
 Useful budget app to track your purchases
 
-![image](https://user-images.githubusercontent.com/99477750/184047093-1d2edfdd-b760-4ed9-9c12-92c3d726c297.png)
+![image](https://user-images.githubusercontent.com/99477750/184535194-6f78367b-52fc-4ef4-bb9a-b0b6d66fd953.png)
 
 ### Deployment link:
 
