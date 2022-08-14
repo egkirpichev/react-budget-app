@@ -1,5 +1,5 @@
-import { useExpensesContext } from "../../../../context/ExpensesContext";
-import { IExpense } from "../../../../types";
+import { useExpensesContext } from "../../../context/ExpensesContext";
+import { IExpense } from "../../../types";
 import { ExpensesListItem } from "./ExpensesListItem";
 import { SearchError, StyledList } from "./styles";
 
@@ -8,7 +8,6 @@ interface IProps {
 }
 
 export const ExpensesList = ({ searchResult }: IProps) => {
-	
   const { expenses } = useExpensesContext();
 
   if (searchResult.length) {
@@ -28,7 +27,8 @@ export const ExpensesList = ({ searchResult }: IProps) => {
     );
   }
 
-  if (!searchResult.length && expenses.length) return <SearchError>Oooops 🙈</SearchError>;
+  if (!searchResult.length && expenses.length)
+    return <SearchError>Oooops 🙈</SearchError>;
 
   return <></>;
 };

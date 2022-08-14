@@ -1,4 +1,4 @@
-import { Expenses } from "./components/Header/Expenses";
+import { Expenses } from "./components/Expenses";
 import { Form } from "./components/Form";
 import { Wrapper } from "./ui/base";
 import { Header } from "./components/Header";

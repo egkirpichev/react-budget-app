@@ -6,7 +6,7 @@ import { Button, ErrorMessage, ExpenseInput, StyledForm } from "./styles";
 import { v4 as uuidv4 } from "uuid";
 
 export const Form = () => {
-  const { expenses, addNewExpense } = useExpensesContext();
+  const { addNewExpense } = useExpensesContext();
 
   const {
     register,

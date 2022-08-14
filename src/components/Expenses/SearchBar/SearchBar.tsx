@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import { useExpensesContext } from "../../../../context/ExpensesContext";
-import { useDebounce } from "../../../../hooks";
-import { useInput } from "../../../../hooks";
+import { useExpensesContext } from "../../../context/ExpensesContext";
+import { useDebounce } from "../../../hooks";
+import { useInput } from "../../../hooks";
 import { StyledSearchBar } from "./styles";
 
 interface IProps {
