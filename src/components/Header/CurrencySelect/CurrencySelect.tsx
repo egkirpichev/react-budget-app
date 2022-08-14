@@ -5,7 +5,7 @@ import { useCurrencyContext } from "../../../context/CurrencyContext";
 import { ICurrencyOption } from "../../../types";
 import { customStyles } from "./styles";
 
-export const LanguageSelect = () => {
+export const CurrencySelect = () => {
   const currencyOptions: ICurrencyOption[] = [
     { value: Currency.USD, label: "USD" },
     { value: Currency.EUR, label: "EUR" },
@@ -27,6 +27,7 @@ export const LanguageSelect = () => {
     <Select
       options={currencyOptions}
       isMulti={false}
+      isSearchable={false}
       defaultValue={currency}
       styles={customStyles}
       onChange={handleChange}
