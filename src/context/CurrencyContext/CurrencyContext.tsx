@@ -28,8 +28,6 @@ export const useCurrencyContext = () => {
   return useContext<ICurrencyContext>(CurrencyContext);
 };
 
-console.log(CurrencyContext);
-
 export const CurrencyContextProvider: FC<{ children: ReactNode }> = ({
   children,
 }) => {
