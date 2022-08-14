@@ -26,6 +26,7 @@ export const Budget = () => {
           placeholder="Enter  budget ..."
           type="text"
           pattern="[0-9]+"
+          autoFocus
           {...budgetInput}
         />
       ) : (
