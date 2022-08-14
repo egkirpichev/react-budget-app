@@ -54,8 +54,8 @@ export const Form = () => {
 
       {errors.cost && (
         <ErrorMessage>
-          The field is required for entrance. Only a positive integer numbers
-          are accepted. Maximum length is 5 digits
+          The field is required for entrance. Only positive integer numbers are
+          accepted. Maximum length is 5 digits
         </ErrorMessage>
       )}
 
