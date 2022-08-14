@@ -34,19 +34,31 @@ export const Form = () => {
           pattern: /^[A-Za-z]+$/i,
         })}
       />
-      {errors.name?.type === "required" && (
-        <ErrorMessage>Name field is required</ErrorMessage>
+
+      {errors.name && (
+        <ErrorMessage>
+          The field is required for entrance. Only latin letters are accepted.
+          Maximum length is 15 characters
+        </ErrorMessage>
       )}
 
       <ExpenseInput
         placeholder="enter cost ..."
-        type="number"
-        {...register("cost", { required: true, maxLength: 5 })}
+        type="text"
+        {...register("cost", {
+          required: true,
+          maxLength: 5,
+          pattern: /[0-9]+/,
+        })}
       />
 
-      {errors.cost?.type === "required" && (
-        <ErrorMessage>Cost field is required</ErrorMessage>
+      {errors.cost && (
+        <ErrorMessage>
+          The field is required for entrance. Only a positive integer numbers
+          are accepted. Maximum length is 5 digits
+        </ErrorMessage>
       )}
+
       <Button type="submit">Done</Button>
     </StyledForm>
   );
