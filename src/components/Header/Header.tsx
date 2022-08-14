@@ -1,4 +1,4 @@
-import { Spent } from "../Spent";
+import { Spent } from "./Spent";
 import { Title } from "../Title";
 import { Budget } from "./Budget";
 import { CurrencySelect } from "./CurrencySelect";
