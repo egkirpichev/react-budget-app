@@ -1,11 +1,6 @@
 import { createContext, FC, ReactNode, useContext, useState } from "react";
 import { Currency } from "../../config/currency";
-import { ICurrencyOption } from "../../types";
-
-interface ICurrencyContext {
-  currency: ICurrencyOption;
-  setCurrency: (value: ICurrencyOption) => void;
-}
+import { ICurrencyContext, ICurrencyOption } from "../../types";
 
 const CurrencyContext = createContext<ICurrencyContext>({
   currency: { value: Currency.USD, label: "USD" },

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useExpensesContext } from "../context/ExpensesContext";
 import { IExpense } from "../types";
 
@@ -6,14 +6,15 @@ export const useSearch = () => {
   const { expenses } = useExpensesContext();
   const [searchResult, setSearchResult] = useState<IExpense[]>(expenses);
 
-	const searchExpenses = (searchRequest: string) => {
-      if (searchRequest) {setSearchResult(
+  const searchExpenses = (searchRequest: string) => {
+    if (searchRequest) {
+      setSearchResult(
         expenses.filter((expense) =>
           expense.name.toLowerCase().match(searchRequest.toLowerCase())
         )
       );
-    } else setSearchResult(expenses)
-	}
+    } else setSearchResult(expenses);
+  };
 
-  return { searchResult, searchExpenses};
+  return { searchResult, searchExpenses };
 };

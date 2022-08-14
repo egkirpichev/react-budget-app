@@ -1,11 +1,5 @@
 import { createContext, FC, ReactNode, useContext, useState } from "react";
-import { IExpense } from "../../types";
-
-interface IExpencesContext {
-  expenses: IExpense[] | [];
-  addNewExpense: (value: IExpense) => void;
-  removeExpense: (id: string) => void;
-}
+import { IExpencesContext, IExpense } from "../../types";
 
 const ExpensesContext = createContext<IExpencesContext>({
   expenses: [],

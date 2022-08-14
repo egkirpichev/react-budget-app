@@ -1,9 +1,5 @@
 import { createContext, FC, ReactNode, useContext, useState } from "react";
-
-interface IBudgetContext {
-  budget: number;
-  editBudgetValue: (value: string) => void;
-}
+import { IBudgetContext } from "../../types";
 
 const BudgetContext = createContext({
   budget: 0,
