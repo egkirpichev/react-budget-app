@@ -1,6 +1,6 @@
-import { useExpensesContext } from "../../../context/ExpensesContext";
-import { IExpense } from "../../../types";
-import { ExpensesListItem } from "./ExpensesListItem";
+import { useExpensesContext } from "../../context/ExpensesContext";
+import { IExpense } from "../../types";
+import { ExpensesListItem } from "../ExpensesListItem";
 import { SearchError, StyledList } from "./styles";
 
 interface IProps {

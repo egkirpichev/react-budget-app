@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Color } from "../../../../../ui/color";
+import { Color } from "../../ui/color";
 
 export const StyledBadge = styled.span`
   padding: 3px 14px;

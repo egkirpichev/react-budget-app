@@ -1,7 +1,7 @@
 import { useSearch } from "../../hooks/useSearch";
 import { Title } from "../Title";
-import { ExpensesList } from "./ExpesesList";
-import { SearchBar } from "./SearchBar";
+import { ExpensesList } from "../ExpesesList";
+import { SearchBar } from "../SearchBar";
 import { Container } from "./styles";
 
 export const Expenses = () => {
