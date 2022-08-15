@@ -1,8 +1,8 @@
-import { Spent } from "./Spent";
+import { Spent } from "../Spent";
 import { Title } from "../Title";
-import { Budget } from "./Budget";
-import { CurrencySelect } from "./CurrencySelect";
-import { Remaining } from "./Remaining";
+import { Budget } from "../Budget";
+import { CurrencySelect } from "../CurrencySelect";
+import { Remaining } from "../Remaining";
 import { StyledHeader } from "./styles";
 
 export const Header = () => {

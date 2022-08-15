@@ -1,6 +1,6 @@
-import { useCurrencyContext } from "../../../context/CurrencyContext";
-import { useExpensesContext } from "../../../context/ExpensesContext";
-import { IExpense } from "../../../types";
+import { useCurrencyContext } from "../../context/CurrencyContext";
+import { useExpensesContext } from "../../context/ExpensesContext";
+import { IExpense } from "../../types";
 import { StyledSpent, Title } from "./styles";
 
 export const Spent = () => {

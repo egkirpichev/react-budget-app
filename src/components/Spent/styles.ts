@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Color } from "../../../ui/color";
+import { Color } from "../../ui/color";
 
 export const StyledSpent = styled.div`
   grid-column: 1/3;

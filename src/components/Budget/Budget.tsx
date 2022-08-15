@@ -1,7 +1,7 @@
 import { ChangeEvent, useState } from "react";
-import { useBudgetContext } from "../../../context/BudgetContext";
-import { useCurrencyContext } from "../../../context/CurrencyContext";
-import { useInput } from "../../../hooks";
+import { useBudgetContext } from "../../context/BudgetContext";
+import { useCurrencyContext } from "../../context/CurrencyContext";
+import { useInput } from "../../hooks";
 import { Button, Input, StyledBudget, Title } from "./styles";
 
 export const Budget = () => {
