@@ -1,6 +1,6 @@
 import { PriceBadge } from "../PriceBadge";
 import { DeleteButton, ListItem, Name } from "./styles";
-import { ReactComponent as CloseIcon } from "../../../../assets/closeicon.svg";
+import { ReactComponent as CloseIcon } from "../../assets/closeicon.svg";
 import { useExpensesContext } from "../../context/ExpensesContext";
 import { useCurrencyContext } from "../../context/CurrencyContext";
 
